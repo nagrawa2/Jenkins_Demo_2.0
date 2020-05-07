@@ -1,0 +1,36 @@
+pipeline{
+
+    agent any
+    stages{
+   
+         stage("Git Checkout"){
+                steps{
+                    echo "checkout completed"
+                }
+                }
+                
+                stage("Maven build"){
+                steps{
+                echo "build successfull"
+               bat label: '', script: 'mvn clean install'
+                }
+                 }
+                stage("Test"){
+                steps{
+                echo "Testing successfull"
+                }
+                }
+                stage("Deploy"){
+                steps{
+                echo "deployment is  successfull"
+                }
+                }
+            }
+            
+              
+            
+            
+        
+    
+
+}
