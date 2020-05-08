@@ -15,9 +15,9 @@ pipeline{
                bat label: '', script: 'mvn clean install'
                 }
                  }
-                stage("Test"){
+                stage("Email send"){
                 steps{
-                echo "Testing successfull"
+                mail bcc: '', body: 'Build is successfully completed', cc: '', from: '', replyTo: '', subject: 'Build success ', to: 'shivani.1690.@gmail.com'
                 }
                 }
                 stage("Deploy"){
