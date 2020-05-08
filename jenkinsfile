@@ -20,6 +20,10 @@ pipeline{
                 mail bcc: '', body: 'Build is successfully completed', cc: '', from: '', replyTo: '', subject: 'Build success ', to: 'shivani.1690.@gmail.com'
                 }
                 }
+                stage("Testing"){
+                steps{
+                echo "Testing is  successfull"
+                }
                 stage("Deploy"){
                 steps{
                 echo "deployment is  successfull"
